@@ -11,7 +11,7 @@ y = iris.target
 # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=40) # random_state是随机种子，保证每次划分的数据集都是相同的
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3)
 
-# # 创建逻辑回归模型，会根据数据决定使用多分类还是二分类
+# 创建逻辑回归模型，会根据数据决定使用多分类还是二分类
 # 其实多分类情况下是自动去用softmax回归，sklearn包并没有专门去封装softmax回归
 # 当然也可以用逻辑回归OVR去做多分类，可以通过超参数控制
 # lr = LogisticRegression(multi_class='multinomial') # softmax回归做多分类
