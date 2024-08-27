@@ -22,4 +22,4 @@ y_pred = lr.predict(X_test)
 
 accuracy = accuracy_score(y_test, y_pred)
 # 准确率
-print('Accuracy: {}'.format(accuracy))
+print(f'Accuracy: {accuracy * 100:.2f}%')
