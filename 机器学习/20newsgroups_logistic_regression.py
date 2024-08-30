@@ -10,12 +10,14 @@ newgroups_test = fetch_20newsgroups(subset='test')
 # 创建一个pipeline，用于文件特征提取，接着使用逻辑回归
 pipeline = make_pipeline(CountVectorizer(), LogisticRegression(max_iter=3000))
 
+print(newgroups_test.target)
+
 # 训练模型
 pipeline.fit(newgroups_train.data, newgroups_train.target)
 
 # 测试模型
 y_pred = pipeline.predict(newgroups_test.data)
-
+# print(y_pred)
 # 输出模型准确率
 print('Accuracy: %.2f' % accuracy_score(newgroups_test.target, y_pred))
 
